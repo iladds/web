@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iladds.com/sitemap.xml
+
+User-agent: *
+Disallow: /~lock.*
+Disallow: /.git/
