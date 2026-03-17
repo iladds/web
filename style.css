@@ -53,6 +53,42 @@ nav {
     color: #e94560;
 }
 
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a1a2e;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    z-index: 1001;
+    padding: 0.5rem 0;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-links .dropdown-content a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.nav-links .dropdown-content a:hover {
+    background: #e94560;
+    color: white;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -327,5 +363,85 @@ footer a:hover {
     
     main {
         padding: 1rem;
+    }
+    
+    .product-tabs {
+        flex-direction: column;
+    }
+}
+
+.product-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.product-tab {
+    padding: 1rem 2rem;
+    background: white;
+    color: #1a1a2e;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.product-tab:hover {
+    background: #f0f0f0;
+}
+
+.product-tab.active {
+    background: #e94560;
+    color: white;
+    border-color: #e94560;
+}
+
+.product-images {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.product-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.image-caption {
+    margin-top: 0.8rem;
+    color: #1a1a2e;
+    font-weight: 600;
+}
+
+.spec-image {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.spec-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+    .product-images {
+        flex-direction: column;
+    }
+    
+    .product-image {
+        max-width: 100%;
     }
 }
